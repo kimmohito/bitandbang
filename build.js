@@ -15,48 +15,44 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('               Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  work: chalk.white('Senior Cloud Developer Advocate at Microsoft'),
-  opensource: chalk.white('Node.js Community Committee ') + chalk.green('⬢'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('@bnb/card  (via GitHub Package Registry)'),
-  labelWork: chalk.white.bold('       Work:'),
-  labelOpenSource: chalk.white.bold('Open Source:'),
-  labelTwitter: chalk.white.bold('    Twitter:'),
-  labelnpm: chalk.white.bold('        npm:'),
-  labelGitHub: chalk.white.bold('     GitHub:'),
-  labelLinkedIn: chalk.white.bold('   LinkedIn:'),
-  labelWeb: chalk.white.bold('        Web:'),
-  labelCard: chalk.white.bold('       Card:')
+ name: chalk.white('         Kim Mohito'),
+ bar: chalk.gray('|'),
+ handle: chalk.yellow('@kimmohito'),
+ work: chalk.white('         Founder'),
+ at: chalk.gray('at'),
+ company: chalk.yellow('Rojak Cube'),
+
+ labelLinkedIn: chalk.blue('linkedin'),
+ labelTwitter: chalk.cyan(' twitter'),
+ labelGitHub: chalk.magenta('  github'),
+ labelNpm: chalk.green('     npm'),
+
+ linkedin: chalk.white('https://linkedin.com/in/') + chalk.grey('kimmohito'),
+ twitter: chalk.white('https://twitter.com/') + chalk.grey('kimmohito'),
+ github: chalk.white('https://github.com/') + chalk.grey('kimmohito'),
+ npm: chalk.white('https://npmjs.com/') + chalk.grey('~kimmohito'),
+
+ card: chalk.red('     npx') + chalk.white(' kimmohito'),
 }
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle}`
-const working = `${data.labelWork}  ${data.work}`
-const opensourcing = `${data.labelOpenSource}  ${data.opensource}`
-const twittering = `${data.labelTwitter}  ${data.twitter}`
-const npming = `${data.labelnpm}  ${data.npm}`
-const githubing = `${data.labelGitHub}  ${data.github}`
-const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
-const webing = `${data.labelWeb}  ${data.web}`
-const carding = `${data.labelCard}  ${data.npx}`
+const heading = `${data.name} ${data.bar} ${data.handle}`
+const working = `${data.work} ${data.at} ${data.company}`
+const linkedining = `${data.labelLinkedIn} ${data.linkedin}`
+const twittering = `${data.labelTwitter} ${data.twitter}`
+const githubing = `${data.labelGitHub} ${data.github}`
+const npming = `${data.labelNpm} ${data.npm}`
+const carding = `${data.card}`
+
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output = heading + // data.name + data.handle
-               newline + newline + // Add one whole blank line
-               working + newline + // data.labelWork + data.work
-               opensourcing + newline + newline + // data.labelOpenSource + data.opensource
-               twittering + newline + // data.labelTwitter + data.twitter
-               npming + newline + // data.labelnpm + data.npm
-               githubing + newline + // data.labelGitHub + data.github
-               linkedining + newline + // data.labelLinkedIn + data.linkedin
-               webing + newline + newline + // data.labelWeb + data.web
-               carding // data.labelCard + data.npx
+const output = heading + newline +
+               working + newline + newline +
+               linkedining + newline +
+               twittering + newline +
+               githubing + newline +
+               npming + newline + newline +
+               carding
 
-fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))
+fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.white(boxen(output, options)))
