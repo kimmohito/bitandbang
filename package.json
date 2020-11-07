@@ -1,6 +1,6 @@
 {
-  "name": "kimmohito",
-  "version": "1.6.0",
+  "name": "kimmo",
+  "version": "1.0.0",
   "description": "A personal card for Tierney Cyren (@bitandbang)",
   "main": "/bin/card.js",
   "bin": {
@@ -26,7 +26,7 @@
     "npx card",
     "business card"
   ],
-  "author": "Tierney Cyren <hello@bnb.im> (http://bnb.im)",
+  "author": "Kim Mohito <kimmohito@gmail.com> (http://kimmohito.com)",
   "license": "MIT",
   "files": [
     "bin/card.js",
@@ -42,6 +42,6 @@
   },
   "dependencies": {},
   "publishConfig": {
-    "registry": "https://npm.registry.github.com/"
+    "registry": ""
   }
 }
